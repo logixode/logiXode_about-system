@@ -58,7 +58,28 @@ h3 {
 }
 
 h4, p {
-  margin: 5px;
+  margin: 2px 10px;
+}
+
+.table-left {
+  width: 200px;
+}
+
+.floating {
+  position: absolute;
+  top: 70px;
+  width: 300px;
+  right: 33px;
+}
+
+.play-along .about-title {
+  width: 165px;
+  border-bottom: 2px solid #3BE38B;
+}
+
+.about-code .about-title {
+  width: 157px;
+  border-bottom: 2px solid #3BE38B;
 }
 
 table {
