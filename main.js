@@ -12,7 +12,7 @@ const debug = /--debug/.test(process.argv[2])
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    height: 540,
+    height: 560,
     width: 940,
     resizable: false,
     title: app.getName(),
