@@ -1,22 +1,26 @@
 {
-  "name": "electron-quick-start",
-  "version": "1.0.0",
+  "name": "about-system",
+  "productName": "About System",
   "description": "A minimal Electron application",
+  "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dev": "electron . --debug",
+    "deb64": "electron-installer-debian --src out/about-system-linux-x64/ --dest dist/installers/ --arch amd64",
+    "package-linux": "electron-packager . about-system --overwrite --platform=linux --arch=x64 --out=out --icon=icon.ico --prune=true"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/logixode/logiXode_about-system",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "About",
+    "System",
+    "electron"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "Rohmad Kurniadi",
+  "license": "MIT",
   "devDependencies": {
-    "electron": "^7.1.7"
+    "electron": "^7.1.7",
+    "devtron": "^1.3.0",
+    "electron-packager": "^14.1.1"
   }
 }

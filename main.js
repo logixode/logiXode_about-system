@@ -1,23 +1,40 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow} = require('electron')
 const path = require('path')
+const url = require('url')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 
+const debug = /--debug/.test(process.argv[2])
+
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    height: 540,
+    width: 940,
+    resizable: false,
+    title: app.getName(),
+    icon: path.join(__dirname, 'icon.png'),
+    fullscreen: false,
     webPreferences: {
+      nodeIntegration: true,
       preload: path.join(__dirname, 'preload.js')
     }
   })
 
+  // mainWindow.setMenu(null)
+
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
+  
+  // Launch fullscreen with DevTools open, usage: npm run debug
+  if (debug) {
+    mainWindow.webContents.openDevTools()
+    mainWindow.maximize()
+    require('devtron').install()
+  }
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

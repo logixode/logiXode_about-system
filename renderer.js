@@ -4,3 +4,7 @@
 // `nodeIntegration` is turned off. Use `preload.js` to
 // selectively enable features needed in the rendering
 // process.
+
+const os = require('os')
+
+document.getElementById("oss").innerHTML = os.cpus()[0].model

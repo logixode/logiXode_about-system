@@ -1,19 +1,104 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
-  </body>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="global.css">
+    
+    <title>About System</title>
+</head>
+<body>
+    <div class="about-wrapper">
+        <header class="about-header">
+            <img class="about-logo" src="assets/img/logo.png" srcset="assets/img/logo.png 1x" alt="Electron API Demos">
+            <img class="about-logo" src="assets/img/logixode.png" srcset="assets/img/logixode.png 1x" alt="Electron API Demos">
+        </header>
+        <main class="about-sections">
+            <section class="about-section play-along">
+                <h1>logiXode v1.0 (Nightly Build)</h1>
+                <h3>- Based on Ubuntu 18.04 LTS -</h3>
+
+                <h2>System Information</h2>
+
+                <table border="0">
+                    <tr>
+                        <td>
+                            <h4>Kernel :</h4>
+                        </td>
+                        <td>
+                            <p>4.15.0-20-generic</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>OS Type :</h4>
+                        </td>
+                        <td>
+                            <p>Linux x86_64</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Processor :</h4>
+                        </td>
+                        <td>
+                            <p id="cpus"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>DE :</h4>
+                        </td>
+                        <td>
+                            <p>Xfce v4.12</p>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <section class="about-section about-code">
+                <h2 class="team">The Amazing Team</h2>
+                <div class="flex">
+                    <div class="card">
+                        <img src="assets/img/ivan.jpg" alt="" class="profile">
+                        <p class="nim">- 361955401157 -</p>
+                        <div class="name">
+                        <h4>M. Ivan Alvian</h4>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/img/rohmad.jpg" alt="" class="profile">
+                        <p class="nim">- 361955401155 -</p>
+                        <div class="name">
+                        <h4>Rohmad Kurniadi</h4>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/img/hilmi.jpg" alt="" class="profile">
+                        <p class="nim">- 361955401153 -</p>
+                        <div class="name">
+                        <h4>Hilmi Bakhtiar</h4>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/img/eca.jpg" alt="" class="profile">
+                        <p class="nim">- 361955401165 -</p>
+                        <div class="name">
+                        <h4>Erica Septiyana</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+    require('./cpus')
+    </script>
+</body>
 </html>
